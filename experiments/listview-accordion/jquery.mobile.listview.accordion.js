@@ -10,6 +10,7 @@ $( "[data-role='listview']" ).live( "listviewcreate", function() {
 		listview = list.data( "listview" );
 
   var accordionExpandOne = function(accordion) {
+ // console.log('h');
 	// Close all other accordion flaps
 	list.find('.ui-li-accordion').slideUp();
 	// Open this flap 
@@ -39,12 +40,13 @@ $( "[data-role='listview']" ).live( "listviewcreate", function() {
   			// Check that the current flap isn't already open
   			if ($accordion.hasClass('ui-li-accordion-open')) {
   				$accordion.slideUp();
-  				$(this).removeClass('ui-li-accordion-open');
+  				$accordion.removeClass('ui-li-accordion-open');
   				return;
   			}
+  			console.log('continue');
   			// If not, clear old classes
   			list.find('.ui-li-accordion-open').removeClass('ui-li-accordion-open');
-  			$(this).toggleClass('ui-li-accordion-open');
+  			$accordion.toggleClass('ui-li-accordion-open');
   			accordionExpandOne($accordion);
   		});
   	});
