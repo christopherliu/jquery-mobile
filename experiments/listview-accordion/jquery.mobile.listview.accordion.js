@@ -10,7 +10,6 @@ $( "[data-role='listview']" ).live( "listviewcreate", function() {
 		listview = list.data( "listview" );
 
   var accordionExpandOne = function(accordion) {
- // console.log('h');
 	// Close all other accordion flaps
 	list.find('.ui-li-accordion').slideUp();
 	// Open this flap 
