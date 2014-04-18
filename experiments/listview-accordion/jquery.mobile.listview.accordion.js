@@ -42,7 +42,6 @@ $( "[data-role='listview']" ).live( "listviewcreate", function() {
   				$accordion.removeClass('ui-li-accordion-open');
   				return;
   			}
-  			console.log('continue');
   			// If not, clear old classes
   			list.find('.ui-li-accordion-open').removeClass('ui-li-accordion-open');
   			$accordion.toggleClass('ui-li-accordion-open');
